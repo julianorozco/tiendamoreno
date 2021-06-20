@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Guantes",
+        "description": "Guantes de nitrilo.",
+        "price": 150,
+        "pictureUrl": "https://raw.githubusercontent.com/julianorozco/descartables-moreno/master/img/guantes.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Crema",
+        "description": "Crema marca Sheba.",
+        "price": 250,
+        "pictureUrl": "https://raw.githubusercontent.com/julianorozco/descartables-moreno/master/img/cremas.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Ambo",
+        "description": "Traje de protección completo.",
+        "price": 200,
+        "pictureUrl": "https://raw.githubusercontent.com/julianorozco/descartables-moreno/master/img/ambo.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Barbijo",
+        "description": "Quirúrgico con elástico.",
+        "price": 500,
+        "pictureUrl": "https://raw.githubusercontent.com/julianorozco/descartables-moreno/master/img/barbijo1.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Apósito",
+        "description": "Pañales línea Comodín.",
+        "price": 300,
+        "pictureUrl": "https://raw.githubusercontent.com/julianorozco/descartables-moreno/master/img/aposito.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Frasco",
+        "description": "Frasco de plástico con tapa.",
+        "price": 100,
+        "pictureUrl": "https://raw.githubusercontent.com/julianorozco/descartables-moreno/master/img/frasco.jpeg"
+    }
+]
