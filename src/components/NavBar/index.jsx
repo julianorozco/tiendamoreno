@@ -1,13 +1,14 @@
 import { CartWidget } from "../CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-info">
       <div className="container">
         <div className="container-fluid">
-          <a className="navbar-brand" href="-">
+          <Link to="/" className="navbar-brand">
             Tienda Moreno
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,39 +23,19 @@ export const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="-">
-                  INICIO
-                </a>
+                <Link to="/category/A" className="nav-link">
+                  PROTECCION
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="-">
-                  NOSOTROS
-                </a>
+                <Link to="/category/B" className="nav-link">
+                  DESCARTABLES
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="-">
-                  PRODUCTOS
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="-"
-                  tabIndex="-1"
-                  aria-disabled="true"
-                >
-                  ENVIOS
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="-"
-                  tabIndex="-1"
-                  aria-disabled="true"
-                >
-                  CONTACTO
-                </a>
+                <Link to="/category/C" className="nav-link">
+                  CREMAS
+                </Link>
               </li>
             </ul>
             <CartWidget />

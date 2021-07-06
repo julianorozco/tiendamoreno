@@ -1,23 +1,30 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { ItemList } from "../ItemList";
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+  const {id} = useParams ();
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("./json/products.json");
+        const response = await fetch("/json/products.json");
         const json = await response.json();
-        setProducts(json);
+        let aux = id ? json.filter (element => element.category===id) :json
+        setProducts(aux);
       } catch (e) {
         console.error(e);
       }
     }
     fetchData();
-  }, []);
+  }, [id]);
   return (
     <>
-      <ItemList products={products} />
+      <div className="container">
+        <div className="d-flex flex-row flex-wrap">
+          <ItemList products={products} />
+        </div>
+      </div>
     </>
   );
 };

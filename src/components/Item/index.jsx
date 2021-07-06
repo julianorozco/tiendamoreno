@@ -10,7 +10,7 @@ export const Item = ({ product }) => {
         <h5 className="d-flex justify-content-center align-items-center">
           ${product.price}
         </h5>
-        <ItemCount stock="5" initial="1" />
+        <ItemCount stock="5" initial="0" />
       </div>
     </div>
   );
