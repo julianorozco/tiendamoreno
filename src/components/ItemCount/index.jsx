@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
 
 export const ItemCount = ({ stock, initial }) => {
   const [count, setCount] = useState([initial]);
@@ -25,7 +24,7 @@ export const ItemCount = ({ stock, initial }) => {
         </button>
       </div>
       <div className="d-flex justify-content-center align-items-center">
-        <Link to={'/item/1'} className="btn btn-outline-info"> Agregar al carrito</Link>
+        <button className="btn btn-outline-info"> Agregar al carrito</button>
       </div>
     </>
   );

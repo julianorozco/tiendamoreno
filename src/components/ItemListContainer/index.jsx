@@ -4,13 +4,13 @@ import { ItemList } from "../ItemList";
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const {id} = useParams ();
+  const { id } = useParams();
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch("/json/products.json");
         const json = await response.json();
-        let aux = id ? json.filter (element => element.category===id) :json
+        let aux = id ? json.filter((element) => element.category === id) : json;
         setProducts(aux);
       } catch (e) {
         console.error(e);
