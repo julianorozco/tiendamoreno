@@ -7,14 +7,10 @@ export const ItemListContainer = () => {
   const { id } = useParams();
   useEffect(() => {
     async function fetchData() {
-      try {
-        const response = await fetch("/json/products.json");
-        const json = await response.json();
-        let aux = id ? json.filter((element) => element.category === id) : json;
-        setProducts(aux);
-      } catch (e) {
-        console.error(e);
-      }
+      const response = await fetch("/json/products.json");
+      const json = await response.json();
+      let aux = id ? json.filter((element) => element.category === id) : json;
+      setProducts(aux);
     }
     fetchData();
   }, [id]);

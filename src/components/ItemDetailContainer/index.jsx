@@ -3,15 +3,17 @@ import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail";
 
 export const ItemDetailContainer = () => {
-  const { id } = useParams();
   const [item, setItem] = useState({});
-  useEffect(async () => {
-    const response = await fetch("/json/products.json");
-    const json = await response.json();
-    let aux = json.find((element) => element.id === parseInt(id));
-    setItem(aux);
+  const { id } = useParams();
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("/json/products.json");
+      const json = await response.json();
+      let aux = json.find((element) => element.id === parseInt(id));
+      setItem(aux);
+    }
+    fetchData();
   }, [id]);
-
   return (
     <>
       <ItemDetail item={item} />
